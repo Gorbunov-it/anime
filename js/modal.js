@@ -14,7 +14,7 @@ closeModalButton.addEventListener("click", () => {
   modal.style.display = "none";
 });
 
-searchInput.addEventListener("input", () => {
+searchInput.addEventListener("input", (e) => {
   console.log(e.target.value);
 });
 
