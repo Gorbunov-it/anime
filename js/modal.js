@@ -1,23 +1,27 @@
-const modal = document.querySelector(".search-model");
-const closeModalButton = modal.querySelector(".icon_close");
-const searchInput = modal.querySelector("#search-input");
+const modal = () => {
+  const model = document.querySelector(".search-model");
+  const closeModalButton = model.querySelector(".icon_close");
+  const searchInput = model.querySelector("#search-input");
 
-const openModalButton = document.querySelector(".icon_search");
+  const openModalButton = document.querySelector(".icon_search");
 
-openModalButton.addEventListener("click", () => {
-  clearInput();
-  modal.style.display = "block";
-});
+  openModalButton.addEventListener("click", () => {
+    clearInput();
+    model.style.display = "block";
+  });
 
-closeModalButton.addEventListener("click", () => {
-  clearInput();
-  modal.style.display = "none";
-});
+  closeModalButton.addEventListener("click", () => {
+    clearInput();
+    model.style.display = "none";
+  });
 
-searchInput.addEventListener("input", (e) => {
-  console.log(e.target.value);
-});
+  searchInput.addEventListener("input", (e) => {
+    console.log(e.target.value);
+  });
 
-const clearInput = () => {
-  searchInput.value = "";
+  const clearInput = () => {
+    searchInput.value = "";
+  };
 };
+
+modal();
